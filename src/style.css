@@ -1,0 +1,87 @@
+/* 保持克制：这是测量工具，不是作品集。视觉干扰越少，读数越可信。 */
+:root {
+  color-scheme: light dark;
+  --fg: #1a1a1a;
+  --bg: #fafafa;
+  --muted: #666;
+  --ok: #0a7c3f;
+  --bad: #b42318;
+  --warn: #92400e;
+  --border: #ddd;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fg: #e8e8e8;
+    --bg: #121212;
+    --muted: #999;
+    --border: #333;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 4rem;
+  color: var(--fg);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+h1 { font-size: 1.35rem; margin-bottom: 0.25rem; }
+p.sub { color: var(--muted); margin-top: 0; font-size: 0.9rem; }
+
+.panel {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.row { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+label { font-size: 0.9rem; display: flex; gap: 0.4rem; align-items: center; }
+
+select, button, input {
+  font: inherit;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--fg);
+}
+
+button { cursor: pointer; }
+button:disabled { opacity: 0.5; cursor: progress; }
+
+#env { font-family: ui-monospace, monospace; font-size: 0.82rem; }
+#env div { display: flex; justify-content: space-between; gap: 1rem; }
+
+.ok { color: var(--ok); }
+.bad { color: var(--bad); }
+.warn { color: var(--warn); }
+
+#log {
+  font-family: ui-monospace, monospace;
+  font-size: 0.78rem;
+  max-height: 240px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  background: rgba(128, 128, 128, 0.08);
+  padding: 0.6rem;
+  border-radius: 6px;
+}
+
+table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+th, td { text-align: left; padding: 0.35rem 0.5rem; border-bottom: 1px solid var(--border); }
+th { font-weight: 600; }
+
+.warnbox {
+  border-left: 3px solid var(--warn);
+  padding: 0.5rem 0.75rem;
+  background: rgba(146, 64, 14, 0.08);
+  font-size: 0.85rem;
+  margin: 0.75rem 0;
+}

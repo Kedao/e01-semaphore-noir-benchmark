@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semaphore Noir 浏览器基准</title>
+      <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <h1>浏览器端 ZK 证明基准</h1>
+    <p class="sub">
+      对比隔离条件与线程请求对证明耗时的影响 ·
+      Semaphore Noir (UltraHonk)
+    </p>
+
+    <div class="panel">
+      <h2 style="font-size: 1rem; margin-top: 0">运行环境</h2>
+      <div id="env">探测中…</div>
+      <div id="warning"></div>
+    </div>
+
+    <div class="panel">
+      <h2 style="font-size: 1rem; margin-top: 0">实验设置</h2>
+      <div class="row">
+        <label>
+          组别
+          <select id="group">
+            <option value="B1">B1 桌面 · 无 COOP/COEP</option>
+            <option value="B2" selected>B2 桌面 · 有 COOP/COEP</option>
+            <option value="B3">B3 桌面 · 有 COOP/COEP · 请求 1 线程</option>
+            <option value="M1">M1 移动 · 无 COOP/COEP</option>
+            <option value="M2">M2 移动 · 有 COOP/COEP</option>
+          </select>
+        </label>
+        <label>
+          线程
+          <select id="threads">
+            <option value="1">1</option>
+            <option value="n" selected>hardwareConcurrency</option>
+          </select>
+        </label>
+        <label>
+          树深度
+          <select id="depth">
+            <option value="7">7 (128 成员)</option>
+            <option value="10">10 (1024 成员)</option>
+            <option value="11" selected>11 (2048 成员)</option>
+          </select>
+        </label>
+        <label>
+          次数
+          <input id="runs" type="number" value="10" min="1" max="50"
+                 style="width: 4rem; font: inherit; padding: 0.3rem; border-radius: 6px; border: 1px solid var(--border); background: var(--bg); color: var(--fg);" />
+        </label>
+        <button id="start">开始</button>
+        <button id="download" disabled>导出 JSON</button>
+      </div>
+      <div id="log" style="margin-top: 1rem">就绪。</div>
+    </div>
+
+    <div class="panel">
+      <h2 style="font-size: 1rem; margin-top: 0">结果</h2>
+      <table id="results">
+        <thead>
+          <tr>
+            <th>组别</th><th>深度</th><th>线程(请求/实际)</th>
+            <th>初始化</th><th>证明</th><th>状态</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <p id="empty" class="sub" style="margin-bottom: 0">尚无数据。</p>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

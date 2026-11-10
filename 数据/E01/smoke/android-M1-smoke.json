@@ -1,0 +1,62 @@
+[
+  {
+    "batch": "android-M1-smoke",
+    "runOrder": 1,
+    "elapsedSeconds": 0,
+    "group": "M1",
+    "warmup": true,
+    "requestedThreads": 8,
+    "actualMultithreaded": null,
+    "merkleTreeDepth": 7,
+    "initTimeMs": 2617.4,
+    "proveTimeMs": 2330.7,
+    "verifyTimeMs": 41.9,
+    "proofVerified": true,
+    "backendDestroyed": true,
+    "backendCooldownMs": 3000.9,
+    "cleanupError": null,
+    "error": null,
+    "env": {
+      "device": "android-A",
+      "osFamily": "Android",
+      "browser": "Chrome",
+      "browserMajor": 156,
+      "mobile": true,
+      "isSecureContext": true,
+      "crossOriginIsolated": false,
+      "sharedArrayBuffer": false,
+      "hardwareConcurrency": 8,
+      "wasmSimd": true
+    }
+  },
+  {
+    "batch": "android-M1-smoke",
+    "runOrder": 2,
+    "elapsedSeconds": 8,
+    "group": "M1",
+    "warmup": false,
+    "requestedThreads": 8,
+    "actualMultithreaded": null,
+    "merkleTreeDepth": 7,
+    "initTimeMs": 521.8,
+    "proveTimeMs": 2152.5,
+    "verifyTimeMs": 41.5,
+    "proofVerified": true,
+    "backendDestroyed": true,
+    "backendCooldownMs": 3002.8,
+    "cleanupError": null,
+    "error": null,
+    "env": {
+      "device": "android-A",
+      "osFamily": "Android",
+      "browser": "Chrome",
+      "browserMajor": 156,
+      "mobile": true,
+      "isSecureContext": true,
+      "crossOriginIsolated": false,
+      "sharedArrayBuffer": false,
+      "hardwareConcurrency": 8,
+      "wasmSimd": true
+    }
+  }
+]

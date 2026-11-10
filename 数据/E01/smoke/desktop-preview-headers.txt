@@ -1,0 +1,4 @@
+公开摘要：本机预览 HTTP 响应头核查
+HTTP 200
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Opener-Policy: same-origin

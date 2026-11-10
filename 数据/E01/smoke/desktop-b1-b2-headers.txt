@@ -1,0 +1,10 @@
+公开摘要：本机 HTTP 响应头核查（只保留相关字段）
+
+B1 http://127.0.0.1:8000/
+HTTP 200
+COOP/COEP 未返回
+
+B2 http://localhost:4173/
+HTTP 200
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Opener-Policy: same-origin

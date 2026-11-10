@@ -1,0 +1,29 @@
+[
+  {
+    "batch": "desktop-B3-trace-smoke",
+    "runOrder": 1,
+    "elapsedSeconds": 0,
+    "group": "B2",
+    "requestedThreads": 1,
+    "actualMultithreaded": false,
+    "degraded": false,
+    "merkleTreeDepth": 7,
+    "initTimeMs": 715.96,
+    "proveTimeMs": 1829.98,
+    "verifyTimeMs": 30.19,
+    "proofVerified": true,
+    "oom": false,
+    "error": null,
+    "env": {
+      "device": "desktop-A",
+      "osFamily": "Linux",
+      "browser": "Chrome",
+      "browserMajor": 156,
+      "mobile": false,
+      "crossOriginIsolated": true,
+      "sharedArrayBuffer": true,
+      "hardwareConcurrency": 14,
+      "wasmSimd": false
+    }
+  }
+]

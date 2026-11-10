@@ -1,0 +1,32 @@
+[
+  {
+    "batch": "desktop-B2-cooldown-smoke",
+    "runOrder": 1,
+    "elapsedSeconds": 0,
+    "group": "B2",
+    "requestedThreads": 14,
+    "actualMultithreaded": true,
+    "degraded": false,
+    "merkleTreeDepth": 10,
+    "initTimeMs": 1090.35,
+    "proveTimeMs": 1101.46,
+    "verifyTimeMs": 78.27,
+    "proofVerified": true,
+    "backendDestroyed": true,
+    "backendCooldownMs": 3000.4,
+    "cleanupError": null,
+    "oom": false,
+    "error": null,
+    "env": {
+      "device": "desktop-A",
+      "osFamily": "Linux",
+      "browser": "Chrome",
+      "browserMajor": 156,
+      "mobile": false,
+      "crossOriginIsolated": true,
+      "sharedArrayBuffer": true,
+      "hardwareConcurrency": 14,
+      "wasmSimd": false
+    }
+  }
+]
